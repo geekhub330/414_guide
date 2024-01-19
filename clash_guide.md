@@ -4,7 +4,7 @@
 - 进入解压后的目录，打开终端运行
 `./cfw`
 # 
-![截图 2024-01-19 19-41-14.png](/home/geek330/414_guide/pics/clash1.png)
+![截图 2024-01-19 19-41-14.png](/pics/clash1.png)
 - 打开`Allow LAN` `Start with Linux`
 - 点击`Service Mode`的`Manage`然后`install`，成功后小地球会变成绿色
 - 然后打开`TUN Mode`，注意如果遇到特殊情况无法上网请尝试关闭该模式
