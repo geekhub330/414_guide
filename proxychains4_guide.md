@@ -3,7 +3,7 @@
 - 打开终端执行`sudo apt update`  
 - `sudo apt install proxychains4`
 - 安装好后打开配置文件`sudo gedit /etc/proxychains4.conf `，拉到最下方
-- 加入一行`socks5 ip port`，其中IP为你本机的ip地址，使用`ifconfig`命令查看，如下图`inet`则为本机ip，port为clash的general界面中的端口号
+- 加入一行`socks5 ip port`，其中IP为你本机的ip地址，使用`ifconfig`命令查看，如下图`inet`则为本机ip，port为clash的general界面中的端口号  
 ![ip](/pics/ip.png)  
 ![port](/pics/port.png)  
 - 示例为下图所示  
