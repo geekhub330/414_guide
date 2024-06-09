@@ -41,16 +41,18 @@
 - **关机时同样注意先利用键盘关闭Ubuntu系统，即关闭工控机，然后再关闭底盘电源，即旋转旋钮Q2关闭**
 
 ### 系统操作
-
-- 进入到Ubuntu系统后,进入主目录，找到两个文件夹，一个名为hunter_ws
-- 该工作空间下包含有小车所有的传感器驱动文件，包括激光雷达、IMU以及车辆底盘与ROS的通讯控制
-- ctrl+alt+t打开终端或者进入hunter_ws目录内使用鼠标右键打开终端，两种效果相同
-- 如果直接使用快捷键打开终端需要cd ~/hunter_ws，这样就进入到该工作空间下
-
 **要使用ROS通讯控制，首先要在主目录下运行脚本文件打开can口通讯**
 
 - 操作如下：Ubuntu22.04下快捷键打开终端，运行./bringup_can2usb_500k.bash
 - Ubuntu20.04下同理./bringup_can2usb.bash
+**打开can口通信后可以启动ROS的控制**
+- 进入到Ubuntu系统后,进入主目录，找到两个文件夹，一个名为hunter_ws,另一个为hunter_nav2_ws
+- 第一个工作空间hunter_ws包含有小车所有的传感器驱动文件，包括激光雷达、IMU以及车辆底盘与ROS的通讯控制
+- 第二个工作空间hunter_nav2_ws为ROS2专属的一键导航模块
+- ctrl+alt+t打开终端或者进入hunter_ws目录内使用鼠标右键打开终端，两种效果相同
+- 如果直接使用快捷键打开终端需要cd ~/hunter_ws，这样就进入到该工作空间下
+
+
 
 **现在可以开启小车底盘的一键启动程序**
 
@@ -67,15 +69,16 @@ roslaunch hunter_bringup hunter_robot_base.launch
 source install/setup.bash
 ros2 launch hunter_bringup hunter_bringup.launch.py
 ```
-- 此时使用ros的话题命令可以查看当前已启动的话题名称
+**此时使用ros的话题命令可以查看当前已启动的话题名称**
 - ROS1：
 ```
 rostopic list
 ```
-- ROS2：robot
+- ROS2：
 ```
 ros2 topic list
 ```
+
 ### 开启Nav2导航模块
 - ROS2集成了一个开箱即用的导航模块Navigation2，已在Ubuntu22.04中集成
 - 找到主目录下的hunter_nav2_ws文件夹即为该模块启动程序
